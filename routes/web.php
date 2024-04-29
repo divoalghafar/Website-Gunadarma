@@ -23,4 +23,4 @@ Route::get('/', function () {
 Route::get('admin/login', [AdminControllers::class, 'loginForm'])->name('admin.login');
 Route::post('login/save', [AdminControllers::class, 'authenticate'])->name('admin.authenticate');
 Route::get('admin/dashboard', [AdminControllers::class, 'dashboard'])->name('admin.dashboard');
-Route::get('admin/about', [AdminControllers::class, 'about'])->name('admin.logout');
+Route::get('admin/about', [AdminControllers::class, 'about'])->name('admin.about');

@@ -14,10 +14,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 27rem;">Home</a>
+                        <a class="nav-link active text-white" aria-current="page" href="{{route('admin.login')}}" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 27rem;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 14rem;">About</a>
+                        <a class="nav-link text-white" href="{{route('admin.about')}}" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 14rem;">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 16rem;">Status</a>

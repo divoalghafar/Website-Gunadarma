@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .card {
+            background: linear-gradient(#F6D8CE, #6E3367);
+
+            
+        }
+    </style>
 </head>
 <body style="background-color: #6E3367;">
     <nav class="navbar navbar-expand-lg" style="background-color: #B3E5BE;">
@@ -14,13 +22,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="#" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 27rem;">Home</a>
+                        <a class="nav-link active text-white" aria-current="page" href="{{ route('admin.login') }}" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 27rem;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 14rem;">About</a>
+                        <a class="nav-link text-white" href="{{ route('admin.about') }}" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 14rem;">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 16rem;">Status</a>
+                        <a class="nav-link text-white" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 16rem;">Status</a>
                     </li>
                 </ul>
             </div>

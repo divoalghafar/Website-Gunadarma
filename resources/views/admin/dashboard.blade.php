@@ -14,11 +14,11 @@
 <body  style="background-color: #6E3367;"> 
     <nav class="navbar navbar-expand-lg" style="background-color: #B3E5BE;">
         <div class="container-fluid">
-            <a class="navbar-brand ms-4 text-white" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold;">UG-Foration</a>
+            <a class="navbar-brand ms-4 text-white" href="{{ route('admin.login') }}" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold;">UG-Foration</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 72rem;">Status</a>
+                        <a class="nav-link text-white" href="{{ route('admin.dashboard') }}" style="font-size: 1.5rem; font-family: 'Poppins', sans-serif; font-weight: bold; margin-left: 72rem;">Status</a>
                     </li>
                 </ul>
             </div>
