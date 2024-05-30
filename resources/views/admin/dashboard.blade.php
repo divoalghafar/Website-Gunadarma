@@ -33,42 +33,27 @@
             <button id="downloadExcel" class="bi bi-download btn btn-light shading border-dark" style="border-radius: 10px; height: 39px; margin-top: 10rem;"></button>
         </div>
     </div>
-        <table id="mahasiswaTable" class="table table-light table-hover table-striped" style="width: 80rem; margin-left: 5.5rem; margin-top: 1rem;">
-            <thead>
+    <table id="mahasiswaTable" class="table table-light table-hover table-striped" style="width: 80rem; margin-left: 5.5rem; margin-top: 1rem;">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Nama Lengkap</th>
+                <th>NPM</th>
+                <th>Kelas</th>
+                <th>No. Telp</th>
+                <th>Aspirasi</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>          
+            @foreach ($tabel as $i => $admin)
                 <tr>
-                    <th>No.</th>
-                    <th>Nama Lengkap</th>
-                    <th>NPM</th>
-                    <th>Kelas</th>
-                    <th>No. Telp</th>
-                    <th>Aspirasi</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Lilis Apriyani</td>
-                    <td>10120591</td>
-                    <td>3KA14</td>
-                    <td>081288930460</td>
-                    <td>Vclass sering down</td>
-                    <td>
-                        <select class="form-select text-white" style="background-color: #39ff14;" aria-label="Default select example">
-                            <option selected>Status</option>
-                            <option value="1">Review</option>
-                            <option value="2">On Progress</option>
-                            <option value="3">Done</option>
-                            </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Divo Al Ghafar</td>
-                    <td>10120591</td>
-                    <td>3KA14</td>
-                    <td>081288930460</td>
-                    <td>Vclass sering down</td>
+                    <td>{{ $i + 1 }}</td>
+                    <td>{{ $admin->nama_lengkap }}</td>
+                    <td>{{ $admin->npm }}</td>
+                    <td>{{ $admin->kelas }}</td>
+                    <td>{{ $admin->no_telp }}</td>
+                    <td>{{ $admin->aspirasi }}</td>
                     <td>
                         <select class="form-select text-white" style="background-color: #39ff14;" aria-label="Default select example">
                             <option selected>Status</option>
@@ -78,102 +63,7 @@
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Lilis Apriyani</td>
-                    <td>10120591</td>
-                    <td>3KA14</td>
-                    <td>081288930460</td>
-                    <td>Vclass sering down</td>
-                    <td>
-                        <select class="form-select text-white" style="background-color: #39ff14;" aria-label="Default select example">
-                            <option selected>Status</option>
-                            <option value="1">Review</option>
-                            <option value="2">On Progress</option>
-                            <option value="3">Done</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Lilis Apriyani</td>
-                    <td>10120591</td>
-                    <td>3KA14</td>
-                    <td>081288930460</td>
-                    <td>Vclass sering down</td>
-                    <td>
-                        <select class="form-select text-white" style="background-color: #39ff14;" aria-label="Default select example">
-                            <option selected>Status</option>
-                            <option value="1">Review</option>
-                            <option value="2">On Progress</option>
-                            <option value="3">Done</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Lilis Apriyani</td>
-                    <td>10120591</td>
-                    <td>3KA14</td>
-                    <td>081288930460</td>
-                    <td>Vclass sering down</td>
-                    <td>
-                        <select class="form-select text-white" style="background-color: #39ff14;" aria-label="Default select example">
-                            <option selected>Status</option>
-                            <option value="1">Review</option>
-                            <option value="2">On Progress</option>
-                            <option value="3">Done</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Lilis Apriyani</td>
-                    <td>10120591</td>
-                    <td>3KA14</td>
-                    <td>081288930460</td>
-                    <td>Vclass sering down</td>
-                    <td>
-                        <select class="form-select text-white" style="background-color: #39ff14;" aria-label="Default select example">
-                            <option selected>Status</option>
-                            <option value="1">Review</option>
-                            <option value="2">On Progress</option>
-                            <option value="3">Done</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Lilis Apriyani</td>
-                    <td>10120591</td>
-                    <td>3KA14</td>
-                    <td>081288930460</td>
-                    <td>Vclass sering down</td>
-                    <td>
-                        <select class="form-select text-white" style="background-color: #39ff14;" aria-label="Default select example">
-                            <option selected>Status</option>
-                            <option value="1">Review</option>
-                            <option value="2">On Progress</option>
-                            <option value="3">Done</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Lilis Apriyani</td>
-                    <td>10120591</td>
-                    <td>3KA14</td>
-                    <td>081288930460</td>
-                    <td>Vclass sering down</td>
-                    <td>
-                        <select class="form-select text-white" style="background-color: #39ff14;" aria-label="Default select example">
-                            <option selected>Status</option>
-                            <option value="1">Review</option>
-                            <option value="2">On Progress</option>
-                            <option value="3">Done</option>
-                        </select>
-                    </td>
-                </tr>
+             @endforeach
             </tbody>
         </table>
     </div>

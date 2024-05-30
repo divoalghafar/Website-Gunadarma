@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\AspirasiModel;
 
 class AdminControllers extends Controller
 {
     public function loginForm()
     {
-        return view('admin.login');
+        $admin = AspirasiModel::all();
+
+        return view('admin.login', compact('admin'));
     }
 
     public function authenticate(Request $request)
@@ -26,11 +29,19 @@ class AdminControllers extends Controller
 
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $tabel = AspirasiModel::all();
+        return view('admin.dashboard', compact('tabel'));
     }
 
     public function about()
     {
         return view('admin.about');
+    }
+
+    public function status() {
+
+        $adminstatus = AspirasiModel::all();
+
+        return view('admin.status', compact('adminstatus'));
     }
 }
