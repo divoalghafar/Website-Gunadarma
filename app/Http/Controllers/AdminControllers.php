@@ -44,4 +44,8 @@ class AdminControllers extends Controller
 
         return view('admin.status', compact('adminstatus'));
     }
+
+    public function logout() {
+        return redirect()->route('admin.login');
+    }
 }

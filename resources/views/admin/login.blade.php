@@ -67,7 +67,7 @@
         <div class="card-header border-dark">
             <div class="row">
                 <div class="col-10">
-                    <h5 class="card-title" style="color: #6E3367; font-family: 'Poppins', sans-serif;">{{$data->nama_lengkap}}</h5>
+                    <h5 class="card-title nama-lengkap" style="color: #6E3367; font-family: 'Poppins', sans-serif;">{{$data->nama_lengkap}}</h5>
                 </div>
                 <div class="col-2">
                     <div class="card border-dark text-center" style="color: #6E3367; font-family: 'Poppins', sans-serif; border-radius: 30px;">
@@ -76,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class="card-body" style="height: 10rem;">{{$data->aspirasi}}</div>
+        <div class="card-body aspirasi" style="height: 10rem;">{{$data->aspirasi}}</div>
     </div>
     @endforeach
         <!-- <form method="POST" action="{{ route('admin.authenticate') }}">
@@ -97,6 +97,26 @@
 
 
         <script>
+            $(document).ready(function() {
+                function anonymizeName(name) {
+                    return name.split(' ').map(function(word) {
+                        if (word.length <= 2) return word; // Skip short words
+                        return word[0] + '*'.repeat(word.length - 2) + word[word.length - 1];
+                    }).join(' ');
+                }
+
+                $('.nama-lengkap').each(function() {
+                    var originalName = $(this).text();
+                    var anonymizedName = anonymizeName(originalName);
+                    $(this).text(anonymizedName);
+                });
+
+                $('.aspirasi').each(function() {
+                    var originalAspirasi = $(this).text();
+                    var anonymizedAspirasi = originalAspirasi.replace(/./g, '*');
+                    $(this).text(anonymizedAspirasi);
+                });
+            });
             // Cek jika terdapat error untuk username atau password
             @if(session('error'))
                 var error = "{{ session('error') }}";
